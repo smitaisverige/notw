@@ -1,16 +1,56 @@
-/* Overall container */
+/* OUTER CONTAINER */
 .newsContainer {
   max-width: 1300px;
-  margin: 160px auto 40px; /* space for fixed header/nav */
+  margin: 160px auto 40px;
   padding: 0 20px;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr; /* left, middle, right */
-  gap: 40px;
-  align-items: stretch; /* make all columns same height */
-  
 }
 
-/* Section titles */
+/* BREAKING NEWS BAR */
+.breakingNews {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: white;
+  color:black;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  border: solid black 1px;
+}
+
+.breakingLabel {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  white-space: nowrap;
+}
+
+.breakingHeadlines {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  overflow-x: auto;
+}
+
+.breakingItem {
+  font-size: 16px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.breakingItem:hover {
+  text-decoration: underline;
+}
+
+/* MAIN GRID */
+.newsGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* SECTION TITLES */
 .sectionTitle {
   font-size: 22px;
   margin-bottom: 20px;
@@ -18,31 +58,31 @@
   padding-bottom: 6px;
 }
 
-/* LEFT COLUMN: Recent News */
+/* LEFT COLUMN */
 .leftColumn {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* spacing between articles */
+  gap: 12px;
 }
 
-/* RIGHT COLUMN: Sports News */
+/* RIGHT COLUMN */
 .rightColumn {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* spacing between articles */
+  gap: 20px;
 }
 
-/* MIDDLE COLUMN: Main Article */
+/* MIDDLE COLUMN */
 .middleColumn {
   display: flex;
   flex-direction: column;
 }
 
-/* Main article card */
+/* MAIN ARTICLE */
 .mainArticle {
   display: flex;
   flex-direction: column;
-  height: 100%; /* stretch to match tallest column */
+  height: 100%;
   background: #f4f4f4;
   padding: 30px;
   border-radius: 8px;
@@ -64,28 +104,20 @@
 .mainArticle p {
   font-size: 18px;
   color: #444;
-  flex-grow: 1; /* makes text fill remaining space if needed */
+  flex-grow: 1;
 }
 
-/* Sports article images */
-.recentImage {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 12px;
+.category {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #666;
 }
 
-/* Recent News articles (no images) */
-.recentheading {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-/* Responsive: stack columns on smaller screens */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  .newsContainer {
+  .newsGrid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
