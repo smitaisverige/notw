@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Gveret+Levin&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&family=UnifrakturCook:wght@700&display=swap');
+
+.header {
+  background: white;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;  /* key fix */
+}
+
+
+.icon {
+  margin-right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.left {
+  display: flex;
+  gap: 12px;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headertitle {
+  margin: 0;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: 42px;
+}
+  

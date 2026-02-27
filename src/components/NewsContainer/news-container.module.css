@@ -1,0 +1,96 @@
+/* Overall container */
+.newsContainer {
+  max-width: 1300px;
+  margin: 160px auto 40px; /* space for fixed header/nav */
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* left, middle, right */
+  gap: 40px;
+  align-items: stretch; /* make all columns same height */
+  
+}
+
+/* Section titles */
+.sectionTitle {
+  font-size: 22px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #111;
+  padding-bottom: 6px;
+}
+
+/* LEFT COLUMN: Recent News */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* spacing between articles */
+}
+
+/* RIGHT COLUMN: Sports News */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* spacing between articles */
+}
+
+/* MIDDLE COLUMN: Main Article */
+.middleColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main article card */
+.mainArticle {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* stretch to match tallest column */
+  background: #f4f4f4;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.mainArticle img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.mainArticle h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.mainArticle p {
+  font-size: 18px;
+  color: #444;
+  flex-grow: 1; /* makes text fill remaining space if needed */
+}
+
+/* Sports article images */
+.recentImage {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Recent News articles (no images) */
+.recentheading {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Responsive: stack columns on smaller screens */
+@media (max-width: 900px) {
+  .newsContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mainArticle img {
+    height: 250px;
+  }
+}

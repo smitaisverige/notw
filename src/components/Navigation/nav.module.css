@@ -1,0 +1,39 @@
+.nav {
+  background: #111;
+  color: white;
+  padding: 12px 24px;
+
+  position: fixed;
+  top: 80px;   /* height of header */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav div {
+  display: flex;
+  justify-content: space-around; /* pushes date to the right */
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;          /* makes list horizontal */
+  gap: 20px;              /* space between items */
+  list-style: none;       /* removes bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  cursor: pointer;
+}
+
+.nav li:hover {
+  color: #ccc;
+}
+
+.nav p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
